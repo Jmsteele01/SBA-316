@@ -1,1 +1,1 @@
-console.log("foobar");
+let answer1 = document.getElementById("question 2")
