@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ALAB DOM Manipulation</title>
+    <title>Pokemon Starter Quiz</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./src/styles.css" />
   </head>
 
   <body>
     <header>
-      <nav id="top-menu"></nav>
-      <!-- Add the <nav> element below -->
-      <nav id="sub-menu"></nav>
+      <h1>Which Kanto Starter are You?</h1>
     </header>
-    <main></main>
+    <main>
+      <question>
+        <h3>Which of the following characteristics would you say you possess? (Check all that apply)<br></h3>
+        <input type="checkbox" id="q1a" name="Question 1A" value = "brave">
+        <label for="q1a">Brave</label><br> 
+        <input type="checkbox" id="q1b" name="Question 1B" value = "caring">
+        <label for="q1b">Caring</label><br> 
+        <input type="checkbox" id="q1c" name="Question 1C" value = "wise">
+        <label for="q1c">Wise</label><br> 
+        <input type="checkbox" id="q1d" name="Question 1D" value = "curious">
+        <label for="q1d">Curious</label><br> 
+        <input type="checkbox" id="q1e" name="Question 1E" value = "adaptable">
+        <label for="q1e">Adaptable</label><br> 
+        <br> 
+      </question>
+
+      <question>
+        <h3>Where would you most like to live?<br></h3>
+        <input type="radio" id="q2a" name="Question 2" value = "forest">
+        <label for="q2a">Deep in the forest</label><br> 
+        <input type="radio" id="q2b" name="Question 2" value = "mountain">
+        <label for="q2b">Atop the tallest mountain</label><br> 
+        <input type="radio" id="q2c" name="Question 2" value = "island">
+        <label for="q2c">On an island at sea</label><br> 
+        <input type="radio" id="q2d" name="Question 2" value = "city">
+        <label for="q2d">In a major city</label><br> 
+        <input type="radio" id="q2e" name="Question 2" value = "friends">
+        <label for="q2e">Near my friends</label><br> 
+        <br> 
+      </question>
+
+    </main>
     
     <script defer src="src/script.js"></script>
   </body>
