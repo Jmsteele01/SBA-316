@@ -5,6 +5,7 @@ function submission()
     let question2 = document.getElementsByName("Question 2");
     checkQuestion(question1, false)
     console.log(points);
+    console.log(getResults(points));
 // let fColor = document.getElementById(q3)
 // console.log(fColor);
 
@@ -31,5 +32,24 @@ function checkQuestion(question, isRadio)
 
 function getResults(finalScores)
 {
-
+    let result = 0;
+    let highScore = 0;
+    for(let x = 0; x < finalScores.length; x++)
+    {
+        if(highScore < finalScores[x])
+        {
+            highScore = finalScores[x];
+            result = x;
+        }
+    }
+    
+    switch(result)
+    {
+        case 0: return "Bulbasaur";
+        case 1: return "Charmander";
+        case 2: return "Squirtle";
+        case 3: return "Eevee";
+        case 4: return "Pikachu";
+        default: return "Error";
+    }
 }
