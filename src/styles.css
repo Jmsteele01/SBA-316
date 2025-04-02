@@ -1,3 +1,27 @@
 body{
     background-color: aqua;
+
+    .opening{
+        background-color:goldenrod;
+        text-align: center;
+        h1{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 100px;
+        }
+        p{
+            font-size: 50px;
+        }
+    
+    
+    
+        .question{
+            background-color: red;
+    
+        }
+        .results{
+    
+        }
+}
+
+
 }
