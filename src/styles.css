@@ -2,7 +2,7 @@ body{
     background-color: aqua;
 
     .opening{
-        background-color:goldenrod;
+        background-color:rgb(255, 193, 34);
         text-align: center;
         h1{
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -14,14 +14,11 @@ body{
     
     
     
-        .question{
-            background-color: red;
-    
-        }
-        .results{
-    
-        }
+
 }
 
+main{
+    background-color: rgb(255, 255, 255);
+}
 
 }
