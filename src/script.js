@@ -8,64 +8,34 @@ opening.appendChild(description);
 title.textContent = "Pokemon Starter Quiz!"
 description.textContent = "Which Kanto starter are you?"
 
-// opening.textContent = "Waaaa";
-
-// const setText = document.body.querySelector("#set-text");
-// setText.addEventListener("click", () => {
-//   story.textContent = "It was a dark and stormy night...";
-// });
-
-// const clearText = document.body.querySelector("#clear-text");
-// clearText.addEventListener("click", () => {
-//   story.textContent = "";
-// });
-
-// let body = document.querySelector('body');
-
-// let div1 = document.createElement('div');
-// let div2 = document.createElement('div');
-
-// body.appendChild(div1);
-// body.appendChild(div2);
-
-// let ordered = document.createElement('ol');
-// let unordered = document.createElement('ul');
-
-// div1.appendChild(ordered);
-// div2.appendChild(unordered);
-
-// function createListItems(parent, num)
-// {
-//     for(let i =0; i < num; i++)
-//     {
-//         let newLI = document.createElement('li');
-//         parent.appendChild(newLI);
-
-//     }
-// }
-
-// createListItems(ordered, 3);
-// createListItems(unordered, 5);
-
 document.getElementById("submit_btn").addEventListener("click", submission);
+document.getElementById("reset_btn").addEventListener("click", resetQuiz);
+
+const results = document.body.querySelector(".results");
+let userPkm = document.createElement("h1");
+
+results.appendChild(userPkm);
 
 function submission()
 {
-    let points = [0, 0, 0];
+    let points = [0, 0, 0]; //points for bulbasaur, charmander, and squirtle in that order
     let question1 = document.getElementsByName("Question 1");
     let question2 = document.getElementsByName("Question 2");
+
+    //gets answers to first question and adds points
     checkQuestion(question1, points);
-    console.log(points);
+
+    //gets answers to second question and adds points
     checkQuestion(question2, points);
+
+    //gets the value of the chosen color and distrubtes points based on selection
     let fColor = document.getElementById("q3");
     checkColor(fColor.value, points);
-    console.log(getResults(points));
 
-    console.log(points);
+    //shows the user what pokemon they are
+    showResults(getResults(points));
 
-    //resets points
-   //points = [0, 0, 0];
-
+    //changes the background to selected color from q3
     document.body.style.backgroundColor = fColor.value;
 };
 
@@ -122,4 +92,15 @@ function checkColor(colorSelect, score)
     score[0] += g;
     score[1] += r;
     score[2] += b;
+}
+
+function resetQuiz()
+{
+    document.body.style.removeProperty("background-color");
+    results.firstChild.textContent = "";
+}
+
+function showResults(winner)
+{
+    results.firstChild.textContent = "You are a "+winner+"!";
 }

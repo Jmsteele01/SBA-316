@@ -21,4 +21,10 @@ main{
     background-color: rgb(255, 255, 255);
 }
 
+.results{
+    background-color:rgb(255, 193, 34);
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
 }
