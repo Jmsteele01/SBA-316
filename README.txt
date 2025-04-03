@@ -1,0 +1,1 @@
+This program runs a short quiz to determine which Kanto starter the user is most like, then displays the result.
